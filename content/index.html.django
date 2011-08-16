@@ -74,15 +74,19 @@
             <p></p>
             <ul></ul>
         </div>
-        <p>
-            Stay up-to-date with our farmers market appearances:
-        </p>
+
+        <h3>Stay up-to-date with our farmers market appearances:</h3>
+
         <a id="twitter" href="https://twitter.com/gathergranola">
-            Follow us on Twitter &raquo;
+            <span>Follow us on Twitter &raquo;</span>
         </a>
         <a id="facebook" href="https://www.facebook.com/chipmunkschoice">
-            Connect with us on Facebook &raquo;
+            <span>Connect with us on Facebook &raquo;</span>
         </a>
+
+        <h3>Questions or comments? Get in touch!</h3>
+
+        <div id="contact-form"></div>
     </div>
 
     <div class="footer">
@@ -101,6 +105,15 @@
         {% include "media_includes/where-to-buy.js" %}
 
         tweetInit();storeInit();
+
+        $(document).ready(function () {
+            PigeonFarm({
+                server    : "http://pigeonfarm.net",
+                site      : "gatherersgranola.com",
+                key       : "",
+                container : "#contact-form"
+            });
+        });
     </script>
 
 </body>

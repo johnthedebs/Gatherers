@@ -8,6 +8,8 @@ $logo_width: 499px
 $main_body_width: 960px
 $mobile_body_width: $logo_width
 
+$serif: ClarendonFSLight, Georgia, serif
+
 html
     margin: 0
     padding: 0
@@ -34,7 +36,7 @@ body
     position: relative
     margin: 0 auto
     padding: 0 10px
-    font-family: ClarendonFSLight, Georgia, serif
+    font-family: $serif
     font-weight: 300
 
 h1.logo
@@ -101,9 +103,13 @@ h1.logo, .banner
 .media-boxes
     +single-text-shadow
     width: $logo_width
-    p, a, ul
+    h3, p, a, ul
         font-size: 18px
         color: white
+    h3
+        font-weight: normal
+        font-size: 22px
+        margin-top: 25px
     & > a
         min-height: 32px
         display: block
@@ -118,6 +124,11 @@ h1.logo, .banner
             display: none
             margin: 0
             padding: 0 0 0 2em
+    #facebook, #twitter
+        +inline-block
+        vertical-align: middle
+        span
+            +inline-block
     #facebook
         background: url("images/icons/facebook.png") top left no-repeat
         &:hover
@@ -126,3 +137,20 @@ h1.logo, .banner
         background: url("images/icons/twitter.png") top left no-repeat
         &:hover
             background-image: url("images/icons/twitter_hover.png")
+    #contact-form
+        color: white
+        label
+            +inline-block
+            width: 70px
+        input, textarea
+            border: 0
+            padding: 3px
+            font-family: $serif
+        input
+            font-size: 13px
+            margin-bottom: 4px
+            width: 150px
+        textarea
+            font-size: 13px
+            height: 100px
+            width: 224px
