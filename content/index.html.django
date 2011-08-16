@@ -110,7 +110,7 @@
             PigeonFarm({
                 server    : "http://pigeonfarm.net",
                 site      : "gatherersgranola.com",
-                key       : "",
+                key       : "9ce97364-23fd-477c-afe0-589726298b65",
                 container : "#contact-form"
             });
         });
